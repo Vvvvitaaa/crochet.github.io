@@ -1,0 +1,88 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	background-color: bisque;
+	align-items: center;
+	height: 100vh;
+}
+ul{
+	background-color:burlywood;
+	width:100%;
+}
+li{
+	display: inline;
+	padding-left:10%;
+	font-size: 30px;
+}
+a{
+	color: white;
+	font-family: 方正姚体;
+}
+a:hover{
+	color: black;
+}
+.container{
+	margin-top: 10%;
+}
+.container .card{
+	position: relative;
+	min-width: 360px; 
+	/* height:卡片长度,与img的空余部分 */
+	height: 300px;
+	background-color: #fff;
+	/* margin:30px:卡片与卡片的预留部分  15px:与外侧的距离*/
+	margin: 30px 20px;
+	/* 图片之间的距离 */
+	padding: 25px 15px;
+	border-radius: 5px;
+	/* 阴影部分 */
+	box-shadow:  0 5px rgba(0,0, 0, 5);
+	/* 滑动 */
+	transition: 0.3s ease-in-out;
+}
+/* 点击图片后卡片容器会变大 */
+.container .card:hover{
+	height: 450px;
+	
+}
+.container .card .img-box{
+	position: relative;
+	width:300px;
+	height: 300px;
+	border-radius: 5px;
+	/* 图片底部隐藏 */
+	overflow: hidden;
+	/* 图片在卡片上层 */
+	top:-60px;
+	left: 10px;
+	box-shadow: 0 5px 20px rgba(0, 0, 0, 2);
+}
+.container .card .img-box img{
+	width:100%;
+}
+.container .card .text-box{
+	position: relative;
+	margin-top: -140px;
+	padding: 10px 15px;
+	text-align: center;
+	/* 元素不可见 */
+	/* visibility:hidden; */
+	opacity: 0;
+	 transition: 0.3s ease-in-out;
+}
+.container .card .text-box p{
+	text-align: left;
+	line-height: 25px;
+	margin-top: 10px;
+	font-size: 15px;
+}
+.container .card:hover .text-box{
+	/* 鼠标移入，元素可见 */
+	visibility: visible;
+	opacity: 1;
+	margin-top: -40px;
+	/* 动画延迟0.2s */
+	transition-delay: 0.2s;
+}
